@@ -1,0 +1,6 @@
+{
+  "name": "Way2Home",
+  "description": "Plataforma de renta de patines y bicicletas para la movilidad de alumnos y docentes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

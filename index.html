@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Way2Home — Renta de Patines y Bicicletas</title>
+    <meta
+      name="description"
+      content="Plataforma de renta de patines y bicicletas para facilitar la movilidad de alumnos y docentes."
+    />
+    <meta property="og:title" content="Way2Home — Renta de Patines y Bicicletas" />
+    <meta
+      property="og:description"
+      content="Movilidad ágil en campus para alumnos y docentes. Planes por día, semanal y mensual."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar" id="topHeader">
+      <div class="container topbar-inner">
+        <a href="#inicio" class="brand-wordmark">Way2Home</a>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#flota" class="nav-link">Flota</a>
+          <a href="#tarifas" class="nav-link">Tarifas</a>
+          <a href="#reservar" class="nav-link">Reservar</a>
+          <a href="#mi-cuenta" class="nav-link">Mi Cuenta</a>
+        </nav>
+
+        <div class="topbar-actions">
+          <button type="button" id="headerAuthAction" class="btn btn-primary btn-sm">
+            Iniciar sesión
+          </button>
+          <button
+            type="button"
+            id="mobileMenuToggle"
+            class="mobile-menu-btn"
+            aria-label="Abrir menú de navegación"
+            aria-expanded="false"
+            aria-controls="mobileNavDrawer"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <line x1="3" y1="12" x2="21" y2="12" />
+              <line x1="3" y1="18" x2="21" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav class="mobile-nav" id="mobileNavDrawer" hidden aria-label="Menú móvil">
+        <a href="#flota" class="mobile-nav-link">Flota</a>
+        <a href="#tarifas" class="mobile-nav-link">Tarifas</a>
+        <a href="#reservar" class="mobile-nav-link">Reservar</a>
+        <a href="#mi-cuenta" class="mobile-nav-link">Mi Cuenta</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section" id="inicio">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow-meta">
+              <span>Movilidad universitaria</span>
+              <span aria-hidden="true">·</span>
+              <span>Alumnos y docentes</span>
+              <span aria-hidden="true">·</span>
+              <span>Temporada 2026</span>
+            </p>
+            <h1 class="hero-title">Renta de patines y bicicletas para tu trayecto en campus</h1>
+            <p class="hero-subtitle">
+              Reserva en minutos con planes por día, semanal o mensual. El casco de seguridad es obligatorio en cada viaje y va incluido gratis al contratar tu paquete mensual.
+            </p>
+            <div class="hero-cta-row">
+              <a href="#reservar" class="btn btn-primary">Configurar mi renta</a>
+              <a href="#tarifas" class="btn btn-ghost">Ver tarifas</a>
+            </div>
+            <div class="hero-metrics" aria-label="Resumen de servicio">
+              <div class="metric-item">
+                <span class="metric-value tabular-nums">$80 MXN</span>
+                <span class="metric-label">Bicicleta por día</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value tabular-nums">$120 MXN</span>
+                <span class="metric-label">Patín por día</span>
+              </div>
+              <div class="metric-item">
+                <span class="metric-value tabular-nums">$0 MXN</span>
+                <span class="metric-label">Casco en plan mensual</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-media">
+            <div class="media-frame">
+              <img
+                src="/hero_campus_mobility_1795451347228.jpg"
+                alt="Bicicleta urbana y patín eléctrico estacionados en una plaza universitaria luminosa"
+                referrerpolicy="no-referrer"
+                class="hero-img"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="img-fallback" aria-hidden="true">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="5.5" cy="17.5" r="3.5" />
+                  <circle cx="18.5" cy="17.5" r="3.5" />
+                  <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-3 11.5V14l-3-3 4-3 2 3h2" />
+                </svg>
+                <span>Estación Campus Way2Home</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Flota y Tarifas -->
+      <section class="fleet-section" id="flota">
+        <div class="container">
+          <div class="section-header" id="tarifas">
+            <div>
+              <p class="section-kicker">01. Flota disponible</p>
+              <h2 class="section-title">Elige tu vehículo y compara paquetes</h2>
+            </div>
+            <p class="section-desc">
+              Precios transparentes en pesos mexicanos para estudiantes y docentes. Todos los vehículos reciben mantenimiento preventivo diario.
+            </p>
+          </div>
+
+          <div class="fleet-grid">
+            <!-- Patín -->
+            <article class="vehicle-card">
+              <div class="vehicle-media">
+                <img
+                  src="/vehicle_scooter_studio_1795451346994.jpg"
+                  alt="Patín urbano eléctrico Way2Home en color pizarra y acentos celestes"
+                  referrerpolicy="no-referrer"
+                  class="vehicle-img"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="img-fallback" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="6" cy="18" r="2.5" />
+                    <circle cx="18" cy="18" r="2.5" />
+                    <path d="M8.5 18H15l2-11h2M17 7h-2.5" />
+                  </svg>
+                  <span>Patín Way2Home</span>
+                </div>
+              </div>
+              <div class="vehicle-body">
+                <div class="vehicle-title-row">
+                  <h3 class="vehicle-name">Patín</h3>
+                  <span class="vehicle-meta">Ágil · Trayectos cortos</span>
+                </div>
+                <p class="vehicle-desc">
+                  Ideal para desplazarte rápido entre edificios, bibliotecas y estacionamientos con arranque suave y freno de disco.
+                </p>
+                <div class="pricing-rows" role="list" aria-label="Tarifas de Patín">
+                  <div class="pricing-row" role="listitem">
+                    <span>Por día</span>
+                    <strong class="tabular-nums">$120 MXN</strong>
+                  </div>
+                  <div class="pricing-row" role="listitem">
+                    <span>Semanal</span>
+                    <strong class="tabular-nums">$420 MXN</strong>
+                  </div>
+                  <div class="pricing-row" role="listitem">
+                    <span>Mensual (incluye casco gratis)</span>
+                    <strong class="tabular-nums">$1,200 MXN</strong>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-full select-vehicle-btn"
+                  data-vehicle="Patín"
+                >
+                  Seleccionar Patín
+                </button>
+              </div>
+            </article>
+
+            <!-- Bicicleta -->
+            <article class="vehicle-card">
+              <div class="vehicle-media">
+                <img
+                  src="/vehicle_bicycle_studio_1795451347488.jpg"
+                  alt="Bicicleta urbana Way2Home de aluminio blanco y pizarra con detalles celestes"
+                  referrerpolicy="no-referrer"
+                  class="vehicle-img"
+                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                />
+                <div class="img-fallback" aria-hidden="true">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <circle cx="5.5" cy="17.5" r="3.5" />
+                    <circle cx="18.5" cy="17.5" r="3.5" />
+                    <path d="M5.5 17.5 10 9h5l3.5 8.5M10 9l-2-3m7 3 1.5-3" />
+                  </svg>
+                  <span>Bicicleta Way2Home</span>
+                </div>
+              </div>
+              <div class="vehicle-body">
+                <div class="vehicle-title-row">
+                  <h3 class="vehicle-name">Bicicleta</h3>
+                  <span class="vehicle-meta">Ligera · Mayor autonomía</span>
+                </div>
+                <p class="vehicle-desc">
+                  Cuadro ligero de aluminio con parrilla trasera y transmisión limpia, perfecta para traslados frecuentes dentro y fuera del campus.
+                </p>
+                <div class="pricing-rows" role="list" aria-label="Tarifas de Bicicleta">
+                  <div class="pricing-row" role="listitem">
+                    <span>Por día</span>
+                    <strong class="tabular-nums">$80 MXN</strong>
+                  </div>
+                  <div class="pricing-row" role="listitem">
+                    <span>Semanal</span>
+                    <strong class="tabular-nums">$380 MXN</strong>
+                  </div>
+                  <div class="pricing-row" role="listitem">
+                    <span>Mensual (incluye casco gratis)</span>
+                    <strong class="tabular-nums">$900 MXN</strong>
+                  </div>
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-secondary btn-full select-vehicle-btn"
+                  data-vehicle="Bicicleta"
+                >
+                  Seleccionar Bicicleta
+                </button>
+              </div>
+            </article>
+          </div>
+
+          <!-- Regla de casco obligatorio -->
+          <div class="helmet-banner" role="note">
+            <div class="helmet-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+            </div>
+            <div class="helmet-copy">
+              <h3>Casco obligatorio para tu seguridad</h3>
+              <p>
+                En paquetes <strong>Por día</strong> o <strong>Semanal</strong> se suma un cargo único de <span class="tabular-nums"><strong>$100 MXN</strong></span> por el casco obligatorio. Al elegir el paquete <strong>Mensual</strong>, el casco te lo llevas <strong>gratis ($0 MXN)</strong>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Acceso + Configurador de Renta -->
+      <section class="booking-section" id="reservar">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <p class="section-kicker">02. Acceso y reserva</p>
+              <h2 class="section-title">Registra tu cuenta y configura tu renta</h2>
+            </div>
+            <p class="section-desc">
+              Inicia sesión o crea tu usuario para generar tu comprobante oficial de renta Way2Home.
+            </p>
+          </div>
+
+          <!-- Bloque de Cuenta -->
+          <div class="auth-panel" id="mi-cuenta">
+            <div id="authLoggedOutView">
+              <div class="auth-header">
+                <div>
+                  <h3 class="panel-title">Cuenta de usuario</h3>
+                  <p class="panel-subtitle">Necesaria para guardar y emitir tu resumen de renta</p>
+                </div>
+                <div class="segmented-control" role="tablist" aria-label="Modo de acceso">
+                  <button
+                    type="button"
+                    role="tab"
+                    id="tabLogin"
+                    class="segmented-btn is-active"
+                    aria-selected="true"
+                  >
+                    Iniciar sesión
+                  </button>
+                  <button
+                    type="button"
+                    role="tab"
+                    id="tabRegister"
+                    class="segmented-btn"
+                    aria-selected="false"
+                  >
+                    Crear cuenta
+                  </button>
+                </div>
+              </div>
+
+              <form id="authForm" class="auth-form" novalidate>
+                <div class="form-row-2">
+                  <div class="field-group">
+                    <label for="authUsuario">Usuario</label>
+                    <input
+                      type="text"
+                      id="authUsuario"
+                      name="usuario"
+                      placeholder="Ej. ana_lopez"
+                      autocomplete="username"
+                      required
+                    />
+                  </div>
+                  <div class="field-group">
+                    <label for="authContrasena">Contraseña</label>
+                    <input
+                      type="password"
+                      id="authContrasena"
+                      name="contrasena"
+                      placeholder="Mínimo 4 caracteres"
+                      autocomplete="current-password"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="auth-footer-row">
+                  <div id="authFeedback" class="feedback-box" role="status" aria-live="polite" hidden></div>
+                  <button type="submit" id="authSubmitBtn" class="btn btn-primary">
+                    <span class="btn-spinner" aria-hidden="true" hidden></span>
+                    <span id="authSubmitLabel">Iniciar sesión</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <div id="authLoggedInView" class="session-bar" hidden>
+              <div class="session-info">
+                <div class="session-avatar" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="session-label">Sesión activa</p>
+                  <p class="session-user" id="activeUsernameDisplay"></p>
+                </div>
+              </div>
+              <button type="button" id="logoutBtn" class="btn btn-outline btn-sm">
+                Cerrar sesión
+              </button>
+            </div>
+          </div>
+
+          <!-- Grid principal: Formulario + Cotizador en vivo -->
+          <div class="booking-grid">
+            <form id="rentalForm" class="rental-form-card" novalidate>
+              <h3 class="panel-title">Datos del usuario y servicio</h3>
+              <p class="panel-subtitle">Completa todos los campos obligatorios para calcular y registrar tu renta.</p>
+
+              <div class="form-divider"></div>
+
+              <div class="field-group">
+                <label for="inputNombre">Nombre completo</label>
+                <input
+                  type="text"
+                  id="inputNombre"
+                  name="nombre"
+                  placeholder="Ingresa tu nombre completo"
+                  required
+                />
+              </div>
+
+              <div class="form-row-2">
+                <div class="field-group">
+                  <label for="inputMatricula">Matrícula / Nómina</label>
+                  <input
+                    type="text"
+                    id="inputMatricula"
+                    name="matricula"
+                    placeholder="Ej. A01234567"
+                    required
+                  />
+                </div>
+                <div class="field-group">
+                  <label for="inputCarrera">Carrera o departamento</label>
+                  <input
+                    type="text"
+                    id="inputCarrera"
+                    name="carrera"
+                    placeholder="Ej. Ingeniería en Sistemas"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-row-3">
+                <div class="field-group">
+                  <label for="inputDia">Día de renta (1–31)</label>
+                  <input
+                    type="number"
+                    id="inputDia"
+                    name="dia"
+                    min="1"
+                    max="31"
+                    value="23"
+                    required
+                  />
+                </div>
+                <div class="field-group">
+                  <label for="inputMes">Mes</label>
+                  <select id="inputMes" name="mes" required>
+                    <option value="1">1. Enero</option>
+                    <option value="2">2. Febrero</option>
+                    <option value="3">3. Marzo</option>
+                    <option value="4">4. Abril</option>
+                    <option value="5">5. Mayo</option>
+                    <option value="6">6. Junio</option>
+                    <option value="7">7. Julio</option>
+                    <option value="8">8. Agosto</option>
+                    <option value="9">9. Septiembre</option>
+                    <option value="10">10. Octubre</option>
+                    <option value="11" selected>11. Noviembre</option>
+                    <option value="12">12. Diciembre</option>
+                  </select>
+                </div>
+                <div class="field-group">
+                  <label for="inputAno">Año</label>
+                  <input type="text" id="inputAno" value="2026" readonly aria-readonly="true" />
+                </div>
+              </div>
+
+              <div class="field-group">
+                <span class="field-label">Tipo de cliente</span>
+                <div class="option-grid option-grid-2" role="radiogroup" aria-label="Tipo de cliente">
+                  <button
+                    type="button"
+                    class="choice-card is-selected"
+                    data-group="tipo_cliente"
+                    data-value="Alumno"
+                    aria-checked="true"
+                    role="radio"
+                  >
+                    <span class="choice-title">Alumno</span>
+                    <span class="choice-sub">Comunidad estudiantil</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="choice-card"
+                    data-group="tipo_cliente"
+                    data-value="Docente"
+                    aria-checked="false"
+                    role="radio"
+                  >
+                    <span class="choice-title">Docente</span>
+                    <span class="choice-sub">Personal académico</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <span class="field-label">Vehículo a rentar</span>
+                <div class="option-grid option-grid-2" role="radiogroup" aria-label="Vehículo">
+                  <button
+                    type="button"
+                    class="choice-card is-selected"
+                    data-group="vehiculo"
+                    data-value="Patín"
+                    aria-checked="true"
+                    role="radio"
+                  >
+                    <span class="choice-title">Patín</span>
+                    <span class="choice-sub tabular-nums">Desde $120 MXN</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="choice-card"
+                    data-group="vehiculo"
+                    data-value="Bicicleta"
+                    aria-checked="false"
+                    role="radio"
+                  >
+                    <span class="choice-title">Bicicleta</span>
+                    <span class="choice-sub tabular-nums">Desde $80 MXN</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="field-group">
+                <span class="field-label">Paquete</span>
+                <div class="option-grid option-grid-3" role="radiogroup" aria-label="Paquete">
+                  <button
+                    type="button"
+                    class="choice-card is-selected"
+                    data-group="paquete"
+                    data-value="Por día"
+                    aria-checked="true"
+                    role="radio"
+                  >
+                    <span class="choice-title">Por día</span>
+                    <span class="choice-sub">Uso diario</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="choice-card"
+                    data-group="paquete"
+                    data-value="Semanal"
+                    aria-checked="false"
+                    role="radio"
+                  >
+                    <span class="choice-title">Semanal</span>
+                    <span class="choice-sub">7 días continuos</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="choice-card"
+                    data-group="paquete"
+                    data-value="Mensual"
+                    aria-checked="false"
+                    role="radio"
+                  >
+                    <span class="choice-title">Mensual</span>
+                    <span class="choice-sub">Casco gratis</span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="rentalFeedback" class="feedback-box" role="status" aria-live="polite" hidden></div>
+
+              <button type="submit" id="rentalSubmitBtn" class="btn btn-primary btn-full">
+                <span class="btn-spinner" aria-hidden="true" hidden></span>
+                <span id="rentalSubmitLabel">Confirmar y generar resumen</span>
+              </button>
+            </form>
+
+            <!-- Columna derecha: Cotizador en vivo -->
+            <aside class="summary-preview-card" aria-label="Cotización previa">
+              <div class="summary-head">
+                <p class="section-kicker">Desglose previo</p>
+                <h3 class="panel-title">Resumen de inversión</h3>
+              </div>
+
+              <dl class="summary-list">
+                <div class="summary-row">
+                  <dt>Tipo de cliente</dt>
+                  <dd id="previewCliente">Alumno</dd>
+                </div>
+                <div class="summary-row">
+                  <dt>Vehículo seleccionado</dt>
+                  <dd id="previewVehiculo">Patín</dd>
+                </div>
+                <div class="summary-row">
+                  <dt>Paquete elegido</dt>
+                  <dd id="previewPaquete">Por día</dd>
+                </div>
+                <div class="summary-row">
+                  <dt>Fecha de renta</dt>
+                  <dd id="previewFecha" class="tabular-nums">23 de Noviembre de 2026</dd>
+                </div>
+              </dl>
+
+              <div class="form-divider"></div>
+
+              <dl class="summary-list">
+                <div class="summary-row">
+                  <dt>Costo del paquete</dt>
+                  <dd id="previewCostoPaquete" class="tabular-nums">$120 MXN</dd>
+                </div>
+                <div class="summary-row">
+                  <dt>Casco obligatorio</dt>
+                  <dd id="previewCostoCasco" class="tabular-nums">$100 MXN</dd>
+                </div>
+              </dl>
+
+              <p id="previewHelmetNote" class="helmet-note">
+                Debes comprar un casco para poder utilizar el vehículo ($100 pesos).
+              </p>
+
+              <div class="summary-total-box">
+                <span>Total a pagar</span>
+                <strong id="previewTotal" class="tabular-nums">$220 MXN</strong>
+              </div>
+            </aside>
+          </div>
+
+          <!-- Comprobante Oficial (aparece al confirmar la renta) -->
+          <section id="receiptSection" class="receipt-card" hidden aria-live="polite">
+            <div class="receipt-top">
+              <div>
+                <p class="section-kicker">Comprobante confirmado</p>
+                <h3 class="receipt-title">Resumen de renta — Way2Home</h3>
+              </div>
+              <div class="receipt-folio">
+                <span>Folio</span>
+                <strong id="receiptFolio" class="tabular-nums">W2H-000000</strong>
+              </div>
+            </div>
+
+            <div class="receipt-columns">
+              <div class="receipt-block">
+                <h4>Datos del usuario</h4>
+                <dl class="summary-list">
+                  <div class="summary-row">
+                    <dt>Usuario</dt>
+                    <dd id="receiptUsuario"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Nombre completo</dt>
+                    <dd id="receiptNombre"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Matrícula</dt>
+                    <dd id="receiptMatricula" class="tabular-nums"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Carrera</dt>
+                    <dd id="receiptCarrera"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Fecha de renta</dt>
+                    <dd id="receiptFecha" class="tabular-nums"></dd>
+                  </div>
+                </dl>
+              </div>
+
+              <div class="receipt-block">
+                <h4>Datos del servicio y pago</h4>
+                <dl class="summary-list">
+                  <div class="summary-row">
+                    <dt>Tipo de cliente</dt>
+                    <dd id="receiptCliente"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Vehículo seleccionado</dt>
+                    <dd id="receiptVehiculo"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Paquete elegido</dt>
+                    <dd id="receiptPaquete"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Costo del paquete</dt>
+                    <dd id="receiptCostoPaquete" class="tabular-nums"></dd>
+                  </div>
+                  <div class="summary-row">
+                    <dt>Costo del casco</dt>
+                    <dd id="receiptCostoCasco" class="tabular-nums"></dd>
+                  </div>
+                </dl>
+                <div class="summary-total-box">
+                  <span>TOTAL A PAGAR</span>
+                  <strong id="receiptTotal" class="tabular-nums"></strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="receipt-footer">
+              <p class="receipt-closing">
+                ¡Gracias por elegir Way2Home! · Independencia sobre ruedas
+              </p>
+              <div class="receipt-actions">
+                <button type="button" id="printReceiptBtn" class="btn btn-outline">
+                  Imprimir comprobante
+                </button>
+                <button type="button" id="newRentalBtn" class="btn btn-primary">
+                  Registrar otra renta
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <!-- Historial de rentas del usuario -->
+          <section id="historySection" class="history-card" hidden>
+            <div class="history-head">
+              <div>
+                <p class="section-kicker">Historial</p>
+                <h3 class="panel-title">Mis rentas registradas</h3>
+              </div>
+              <button type="button" id="refreshHistoryBtn" class="btn btn-outline btn-sm">
+                Actualizar
+              </button>
+            </div>
+            <div id="historyList" class="history-list"></div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-wordmark">Way2Home</span>
+          <p>Independencia sobre ruedas · Movilidad universitaria 2026</p>
+        </div>
+        <div class="footer-links">
+          <a href="#flota">Flota</a>
+          <a href="#tarifas">Tarifas</a>
+          <a href="#reservar">Reservar</a>
+          <a href="#mi-cuenta">Mi Cuenta</a>
+        </div>
+        <p class="footer-copy">© 2026 Way2Home</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
